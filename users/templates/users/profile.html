@@ -1,0 +1,36 @@
+<div>
+    <h5>پروفایل {{ user_requested.username }}</h5>
+    <hr>
+    <div>
+        <img src="{{ user_requested.profile.photo.url }}">
+        <div>
+            <h6>نام کاربری:   {{ user_requested.username }}</h6>
+            <h6>تاریخ عضویت:   {{ user_requested.date_joined|date:"d/m/Y" }}</h6>
+
+            {% if user == user_requested %}
+                <h6>نام:  {{ user_requested.first_name }}</h6>
+                <h6>نام خانوادگی: {{ user_requested.last_name }}</h6>
+                <h6>ایمیل: {{ user_requested.email }}</h6>
+                {% if user_requested.profile.phone %}
+                    <h6>شماره همراه: {{ user_requested.profile.phone }}</h6>
+                {% else %}
+                    <h6>شماره همراه: نامشخص</h6>
+                {% endif %}
+                {% if user_requested.profile.address %}
+                    <h6>آدرس: {{ user_requested.profile.address }}</h6>
+                {% else %}
+                    <h6>آدرس: نامشخص</h6>
+                {% endif %}
+                {% if user_requested.profile.receive_updates %}
+                    <h6>دریافت آپدیت های سایت: بله</h6>
+                {% else %}
+                    <h6>دریافت آپدیت های سایت: خیر</h6>
+                {% endif %}
+                <div class="buttons-container">
+                    <a href="{% url 'profile-edit' %}">ویرایش اطلاعات</a><br>
+                    <a href="{% url 'password_change' %}">تغییر رمز عبور</a>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
