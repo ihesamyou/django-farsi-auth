@@ -108,4 +108,14 @@ if settings.DEBUG:
 
 <br>
 
-Note: by default html form validation is set to novalidate. If you want to remove this behavior, remove novalidate from forms in templates.
+Note: by default html form validation is set to novalidate. If you want to remove this behavior, remove novalidate from forms in templates.<br>
+
+
+# Other features<br>
+<ul>
+  <li>Creates a profile when a user is registered using signals.</li>
+  <li>Profiles are only visable by registered users.</li>
+  <li>Users can see profiles with this URL '/profile/<username>'.</li>
+  <li>Personal information is only visable to owner of the account.</li>
+  <li>Resizes large profile images entered by users.</li>
+</ul>
