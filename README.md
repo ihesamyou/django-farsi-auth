@@ -87,7 +87,7 @@ EMAIL_USE_TLS = True
 
 ```
   
-from django.contrib im is set toport admin
+from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
