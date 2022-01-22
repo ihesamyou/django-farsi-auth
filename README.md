@@ -39,6 +39,9 @@ More information about why we should not define a custom User model midproject i
 
 
 ```
+import os
+  
+  
 INSTALLED_APPS = [
   ...,
   'users.apps.UsersConfig',
@@ -100,7 +103,9 @@ if settings.DEBUG:
   
 ```
   
-<li>Lastly create a media folder and add a default_profile.png file there. you can change the name of this file in users/models.py</li></ul>
+<li>Create a media folder and add a default_profile.png file there. you can change the name of this file in users/models.py</li><br>
+<li>Run "python manage.py makemigrations users" and "python manage.py migrate users" commands.</li></ul>
+
 <br>
 
 Note: by default html form validation is set to novalidate. If you want to remove this behavior, remove novalidate from forms in templates.
