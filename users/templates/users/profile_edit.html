@@ -1,0 +1,24 @@
+<div>
+    <h5>ویرایش پروفایل</h5>
+    <hr>
+    <form method="post" enctype="multipart/form-data" novalidate>
+        {% csrf_token %}
+        {{ user_form }}
+        <br>
+        <label for="id_phone">شماره همراه</label>
+        {{ profile_form.phone }}<br>
+        <small>{{ profile_form.phone.help_text }}</small><br>
+        <small>{{ profile_form.errors.phone }}</small><br>
+        <label for="id_address">آدرس</label>
+        {{ profile_form.address }}
+        <p>تغییر عکس پروفایل</p>
+        {{ profile_form.photo }}
+        <small>{{ profile_form.errors.photo }}</small>
+        <br><br>
+        <label style="margin-left: 1rem;" for="id_receive_updates">دریافت آپدیت ها</label>
+        {{ profile_form.receive_updates }}
+        <br><small>{{ profile_form.receive_updates.help_text }}</small>
+        <br><br>
+        <button type="submit">ثبت اطلاعات</button>
+    </form>
+</div>
