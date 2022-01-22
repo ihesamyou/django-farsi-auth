@@ -118,4 +118,5 @@ Note: by default html form validation is set to novalidate. If you want to remov
   <li>Users can see profiles with this URL '/profile/<username>'.</li>
   <li>Personal information is only visable to owner of the account.</li>
   <li>Resizes large profile images entered by users.</li>
+  <li>Tests are available for this app in users/tests.py</li>
 </ul>
