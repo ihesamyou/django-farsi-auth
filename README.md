@@ -7,6 +7,23 @@ A live example of this app is implemented on https://ihosseinu.info/register.<br
 ![farsi-forms](https://user-images.githubusercontent.com/86075967/150630151-dd85e501-510b-4b7b-85d1-c8f768dacd97.png)
 <br><br>
 
+# list of errors:
+<ul>
+  <li>فیلد {fieldname} الزامی است.</li><br>
+  <li>این نام کاربری قبلا انتخاب شده است.</li><br>
+  <li>این ایمیل قبلا ثبت شده است.</li><br>
+  <li>نام کاربری یا رمز عبور اشتباه است.</li><br>
+  <li>این اکانت غیرفعال است.</li><br>
+  <li>رمز عبور باید دارای حداقل {min_length} کاراکتر باشد.</li><br>
+  <li>رمز عبور شما به {field.verbose_name} بسیار شبیه است.</li><br>
+  <li>رمز عبور بیش از حد ساده است.</li><br>
+  <li>رمز عبور نمیتواند فقط از اعداد باشد.</li><br>
+  <li>شماره همراه باید به صورت ۰۹۱۲۱۱۱۱۱۱۱ وارد شود.</li><br>
+  <li>این شماره قبلا ثبت شده است.</li><br>
+  <li>هر دو رمز عبور باید دقیقا مثل هم باشند.</li><br>
+  <li>رمز عبور فعلی اشتباه است.</li><br>
+</ul><br>
+
 ## Note
 You should use and install this app before running makemigrations and migrate command.<br>
 This is because we use a custom User model.<br>
@@ -86,21 +103,4 @@ if settings.DEBUG:
 <li>Lastly create a media folder and add a default_profile.png file there. you can change the name of this file in users/models.py</li></ul>
 <br>
 
-Note: by default html form validation is set to novalidate. If you want to remove this behavior, remove novalidate from forms in templates.<br><br>
-
-# list of errors:
-<ul>
-  <li>فیلد {fieldname} الزامی است.</li><br>
-  <li>این نام کاربری قبلا انتخاب شده است.</li><br>
-  <li>این ایمیل قبلا ثبت شده است.</li><br>
-  <li>نام کاربری یا رمز عبور اشتباه است.</li><br>
-  <li>این اکانت غیرفعال است.</li><br>
-  <li>رمز عبور باید دارای حداقل {min_length} کاراکتر باشد.</li><br>
-  <li>رمز عبور شما به {field.verbose_name} بسیار شبیه است.</li><br>
-  <li>رمز عبور بیش از حد ساده است.</li><br>
-  <li>رمز عبور نمیتواند فقط از اعداد باشد.</li><br>
-  <li>شماره همراه باید به صورت ۰۹۱۲۱۱۱۱۱۱۱ وارد شود.</li><br>
-  <li>این شماره قبلا ثبت شده است.</li><br>
-  <li>هر دو رمز عبور باید دقیقا مثل هم باشند.</li><br>
-  <li>رمز عبور فعلی اشتباه است.</li><br>
-</ul>
+Note: by default html form validation is set to novalidate. If you want to remove this behavior, remove novalidate from forms in templates.
