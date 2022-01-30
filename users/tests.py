@@ -1,14 +1,15 @@
-from django.test import TestCase
+from django.test import TestCase, Client
 from users.models import User, Profile
-from django.test import Client
 
 
 class ModelsTest(TestCase):
     """
     Test for custom User model and Profile model.
     """
+
     def setUp(self):
-        self.user = User.objects.create_user(username='TESTuser9876', email='testemail@gmail.com', first_name='test', last_name='test', password='randomPassword2468')
+        self.user = User.objects.create_user(
+            username='TESTuser9876', email='testemail@gmail.com', first_name='test', last_name='test', password='randomPassword2468')
         c = Client()
         c.login(username=self.user.username, password='randomPassword2468')
         self.profile = Profile.objects.get(user=self.user.id)
